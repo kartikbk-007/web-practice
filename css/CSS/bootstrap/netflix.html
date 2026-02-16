@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            body{
+        background-color: black;
+            padding-top:70px;
+        }
+        #disp{
+        display: flex;
+        }
+        .card{
+        top: 10px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        margin:10px;
+        transition: transform 0.5s;
+        }
+        .card:hover{
+            transform: scale(1.2);
+            z-index: 10;
+            border:10px solid white;
+        }
+        .card-img{
+            height: 200px;
+            width: auto;
+        }
+.profile-img {
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .netflix-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+    
+
+.netflix-menu {
+    list-style: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.netflix-menu li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.netflix-menu li:hover {
+    color: red;
+}
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+<body class="bg-black">
+    <!-- NETFLIX STYLE NAVBAR -->
+<header class="netflix-navbar d-flex align-items-center justify-content-between px-4">
+    
+    <!-- Left side -->
+    <div class="d-flex align-items-center gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+        height="40" alt="Netflix Logo">
+
+        <ul class="d-flex align-items-center gap-4 netflix-menu">
+            <li>Home</li>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>New & Popular</li>
+            <li>My List</li>
+        </ul>
+    </div>
+
+    <!-- Right side icons -->
+    <div class="d-flex align-items-center gap-4">
+        <i class="bi bi-search text-white fs-5"></i>
+        <i class="bi bi-bell text-white fs-5"></i>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                class="profile-img" alt="User profile">
+    </div>
+</header>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00090482-cseqvryjgf-landscape.jpg" class="d-block w-100" alt="..." height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="https://i.ytimg.com/vi/eoOaKN4qCKw/maxresdefault.jpg" class="d-block w-100" alt="..." height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00378770-xmajdhgtwf-landscape.jpg" class="d-block w-100" alt="..." height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00402961-qxyknntjle-landscape.jpg" class="d-block w-100" alt="..." height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00468132-wrcjatuwqd-landscape.jpg" class="d-block w-100" alt="..." height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/9061/1738850609061-h" class="d-block w-100" alt="..." height="500px">
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button><br><br>
+</div>
+
+    <div class="card-group">
+    <div class="card">
+    <img src="https://static.wikia.nocookie.net/spiderman-films/images/4/4e/CaptainAmerica_AOU_character-art-poster.jpg/revision/latest?cb=20160507011012" class="card-img-top" alt="..." height="350px">
+    <div class="card-body">
+        <h5 class="card-title">Captain America</h5>
+        <p class="card-text">Captain America is a superhero created by Joe Simon and Jack Kirby who appears in American comic books published by Marvel Comics.</p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    </div>
+    <div class="card">
+    <img src="https://dessindigo.com/storage/images/posts/hulk/image-reference-dessin-hulk.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">hulk</h5>
+        <p class="card-text">The Hulk is a superhero appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Jack Kirby.</p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    </div>
+    <div class="card">
+    <img src="https://www.shutterstock.com/image-vector/spiderman-art-design-icon-vector-600nw-2404385831.jpg" class="card-img-top" alt="..." height="350px">
+    <div class="card-body" >
+        <h5 class="card-title">Spider-Man</h5>
+        <p class="card-text">Spider-Man is a superhero in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko</p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    </div>
+    <div class="card">
+    <img src="https://i.pinimg.com/736x/0c/c5/e2/0cc5e2a8fd8d7cd62089a8efa15d9713.jpg" class="card-img-top" alt="..." height="350px">
+    <div class="card-body">
+        <h5 class="card-title">iron-Man</h5>
+        <p class="card-text">When Tony Stark, an industrialist, is captured, he constructs a high-tech armoured suit to escape. Once he manages to escape.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+    </div>
+    </div>
+    <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Black_Panther_OS_Vol_1_2.png" class="card-img-top" alt="..." height="350px">
+    <div class="card-body">
+        <h5 class="card-title">Black Panther</h5>
+        <p class="card-text">After his father's death, T'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.</p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    </div>
+    <div class="card">
+    <img src="https://i.pinimg.com/736x/c4/b2/a7/c4b2a7bb3bbf007acb0a2bb44ce251e6.jpg" class="card-img-top" alt="..." height="350px">
+    <div class="card-body">
+        <h5 class="card-title">the scarlet witch</h5>
+        <p class="card-text" >The Scarlet Witch is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Jack Kirby.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="#" class="btn btn-danger w-100">Watch Movie</a>
+        
+    </div>
+    </div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <center>
+
+        <form action="" method="post">
+            <table border="0" cellpadding="8" cellspacing="0"></table>
+            <h1>Personal Details</h1> 
+        <tr>
+            <td> <label for="username">username</label></td>
+        <td> <input type="text" id="username" name="username" placeholder="enter the username" autofocus required></td><br><br>
+        </tr> 
+
+        <tr>
+        <td> <label for="password">password</label></td>
+        <td> <input type="password" id="password" name="password" placeholder="enter the password" required></td><br><br>
+        </tr> 
+
+        <tr>
+        <td> <label for="e-mail">e-mail</label></td>
+        <td> <input type="e-mail" id="e-mail" name="e-mail" placeholder="enter the e-mail" required></td><br><br>
+        </tr> 
+        <td> <label for="gender">gender</label></td>
+        <td> <input type="radio" id="male" name="gender" value="male" > <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+            </td><br><br>
+        </tr>
+        <tr>
+        <td> <label for="phone">phone </label></td>
+        <td> <input type="tel" id="phone" name="phone" maxlength="10"  placeholder="enter the number" required></td><br><br>
+        </tr>
+        <h1>Educational Qualifications</h1>
+        <tr>
+        <td> <label for="Degree">degree</label></td>
+        <td>
+            <select name="Degree" id="Degree">
+                <option value="">--Select group--</option>
+                <option value="BE">BE</option>
+                <option value="BCOM">BCOM</option>
+                <option value="MSC">MSC</option>
+                <option value="BSC">BSC</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+
+                
+            </select>
+        </td><br><br>
+        </tr> 
+        <td> <label for="Engineering">Engineering</label></td>
+        <td>
+            <select name="Engineering" id="Engineering">
+                <option value="">--Select group--</option>
+                <option value="chemical">chemical</option>
+                <option value="civil">civil</option>
+                <option value="computer">computer</option>
+                <option value="electrical">electrical</option>
+                <option value="mechanical">mechanical</option>
+            </select>
+
+        </td><br><br>
+        </tr> 
+        <tr>
+            <td><label for="hobbies"> Hobbies: </label></td>
+
+        <label for="chess">playing chess</label>
+        <input type="checkbox" id="chess" name="hobbies">
+
+        <label for="books">reading books</label>
+        <input type="checkbox" id="books" name="hobbies"><br><br>
+
+        </tr>
+        <tr>
+            <td><h2>Address</h2></td>
+            <td><textarea name="address" id="address" cols="30" rows="5"  placeholder="enter your address here" required></textarea></td><br><br>
+        </tr>
+        <tr>
+            <td>
+                <label for="Attach">attach resume</label>
+            </td>
+            <td>
+                <input type="file" id="Attach" name="Attach" required>
+            </td><br><br>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">submit</button>
+            </td>    
+        </tr>
+    </form>
+    </center>
+</body>
+</html>

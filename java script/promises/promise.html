@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img height="200px" src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt=""><br>
+    <button onclick="order()">order</button>
+    <script>
+        /*let p=new Promise((resolve,reject)=>{
+            let user=true;
+            //let user=false;
+            if(user){
+                resolve("we got biryani");
+            }
+            else{
+                reject("order cancelled")
+            }
+            })
+            //console.log(p);
+        p.then((x)=>console.log(x)).catch((y)=>console.log(y))*/
+
+        //realtime example
+        function order(){
+            let p = new Promise((resolve,reject)=>{
+                let isrestaurantopen = true;
+                console.log("food is orderinggg...");
+                setTimeout(()=>{
+                    if(isrestaurantopen){
+                        resolve("food is delivered")
+                    }
+                    else{
+                        reject("order cancelled restaurant is closed")
+                    }
+                },2000);
+            });
+            p.then((x)=>console.log(x)).catch((y)=>console.log(y));
+        }
+    </script>
+</body>
+</html>

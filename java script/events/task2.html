@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <button onclick="Horse()">Horse</button>
+    <button onclick="dog()">dog</button>
+    <script>
+        let btn=document.querySelectorAll("button")
+        function dog(){
+        let img=document.querySelector("img")
+            img.setAttribute("src","https://images.pexels.com/photos/2318990/pexels-photo-2318990.jpeg?cs=srgb&dl=pexels-mithulvarshan-2318990.jpg&fm=jpg" ) 
+            img.setAttribute("height","300px")
+            img.setAttribute("width","400px")
+            
+        }   
+        function Horse(){
+            let img=document.querySelector("img")
+            img.setAttribute("src","https://img.freepik.com/premium-photo/white-horse-with-cloudy-sky-background_1199278-16327.jpg?semt=ais_hybrid&w=740&q=80") 
+            img.setAttribute("height","300px")
+            img.setAttribute("width","400px")
+        }
+    </script>
+</body>
+</html>

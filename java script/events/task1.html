@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <button id="red">red</button>
+    <button id="skyblue">skyblue</button>
+    <button id="black">black</button>
+
+    <script>
+        let btn=document.querySelector("div")
+        let red=document.querySelector("#red")
+        let skyblue=document.querySelector("#skyblue")
+        let black=document.querySelector("#black")
+        red.onclick=function(){
+            btn.style.backgroundColor="red"
+        }
+        skyblue.onclick=function(){
+            btn.style.backgroundColor="skyblue"
+        }
+        black.onclick=function(){
+            btn.style.backgroundColor="black"
+        }
+    </script>
+</body>
+</html>

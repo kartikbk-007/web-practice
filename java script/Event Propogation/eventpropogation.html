@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gparent {
+            width: 180px;
+            height: 180px;
+            background-color:orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent {
+            width: 120px;
+            height: 120px;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child {
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="gparent">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+    <script>
+        let gparent = document.querySelector(".gparent");
+        let parent = document.querySelector(".parent");
+        let child = document.querySelector(".child");
+
+        gparent.addEventListener("click",()=>{
+            console.log("grand parent");
+        })
+        parent.addEventListener("click",()=>{
+            console.log("parent");
+        })
+        child.addEventListener("click",()=>{
+            console.log("child");
+        })
+
+    </script>
+</body>
+</html>

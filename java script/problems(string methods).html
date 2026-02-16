@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let str="JavaScript"
+        console.log(str.toUpperCase());//converts all charecters into upper case
+        console.log(str.toLowerCase());//converts all charecters into lower case*/
+
+        /*let n=10;
+        console.log(typeof n);*/
+
+        /*let n=10;
+        let a=n.toString();
+        console.log(typeof a);*///converts datatypes into string format
+
+        /*let str="       Javascript          "
+        console.log(str.trimStart());//removes unwanted spaces from start
+        console.log(str.trimEnd());//removes unwanted spaces from end
+        console.log(str.trim());//removes unwanted spaces from start and end*/
+
+        /*let str="java java java"
+        console.log(str.replace("java","c++"));//it will repalce the first matching charecter with new charecter in a string
+        console.log(str.replaceAll("java","c++"));//it will repalce the all matching characters with new charecters in a string*/
+
+        //subsrting
+        /*let str = "JavaScript"
+        console.log(str.substring(2,4));//it will sub part of array*/
+
+        /*let str="JavaScript"
+        console.log(str.substring(-1,4));*///it will consider negative value as 0 
+
+        /*let str="JavaScript"
+        console.log(str.slice(-7,-3));*/
+
+        /*let str="JavaScript"
+        console.log(str.split(" "));//this will convertss srting into array based on parameters*/
+
+        /*let str="JavaScript"
+        console.log(str.includes("x"));//it will check the charecter is present or not and returns boolean value*/
+
+        /*let str="JavaScript"
+        console.log(str.indexOf("a"));//indexof= it will return the index value of charecter(first matching)
+        console.log(str.lastIndexOf("a"));//lastindexof= it will return the index value of charecter(last matching)*/
+
+        /*let str="JavaScript"
+        console.log(str.charAt("5"));//it will return the charecter present at the specipic index position*/
+
+        /*let str="JavaScript"
+        console.log(str.charCodeAt("1"));// it will return the characters ascii values present at the specipic index position*/
+
+        /*let str="JavaScript"
+        console.log(String.fromCharCode(98));//it will convert ascii value into charecter.*/
+
+        //palindrome or not
+        /*let str=prompt("enter a string")
+        let rev=str.split("").reverse().join("");
+        if (rev==str){
+            console.log("palindrome");
+        }
+        else{
+            console.log("not palindrome");
+        }*/
+
+        //repalce the 
+        /*let str="java c++"
+        console.log(str.replace("java","python"));*/
+
+        //count the no of words in a string
+        /*let str="i like python"
+        let rev = str.split(" ").length;
+        console.log(rev);*/
+        
+        //check if string contains word or not
+        /*let str="i like python"
+        let rev=str.includes("python");
+        console.log(rev);*/
+
+        //reversing a string
+        /*let str="i like python"
+        let rev=str.split("").reverse().join("");
+        console.log(rev);*/
+
+        /*let str="javasript"
+        console.log(str.startsWith("java"));//it will check whether the string starts with specified character or not
+        console.log(str.endsWith("pt"));//it will check whether the string ends with specified character or not*/
+
+        //count the no of characters
+        /*let str="javasript"
+        let count=0;
+        for(let i=0;i<str.length;i++){
+            count++;
+        }
+        console.log(count);*/
+
+        //count the no of vowels in a string
+        /*let str="javasript"
+        let vowels="aeiouAEIOU"
+        let count=0;
+        for(let i=0;i<str.length;i++){
+            if (vowels.includes(str[i])){
+                count++;
+            }
+        }
+        console.log(count);*/
+
+        /*let str = "banana";
+        let char = "a";
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] == char) {
+                count++;
+            }
+        }
+        console.log(char + "=" + count);*/
+
+
+        //count the no of words without spaces
+        /*let str="i like python"
+        let result=" "
+        for(let i=0;i<str.length;i++){
+            if (str[i]!=" "){
+                result=result+str[i];
+            }   
+        }
+        console.log(result.length);*/
+
+        //remove duplicates characters from a string
+        /*let str="javastript"
+        let result=" "
+        for(let i=0;i<str.length;i++){
+            if (!result.includes(str[i])){
+                result=result+str[i];
+            }
+        }
+        console.log(result);*/
+
+        //find the largest word in a array
+        /*let str="i like apple"
+        let words=str.split(" ")
+        let longest=""
+        for(let i=0; i<words.length;i++){
+            if (words[i].length>longest.length){
+                longest=words[i]
+            }
+        }
+        console.log(longest);*/
+
+        //wap to count the uppercase
+        let str="JavaScript"
+        let count=0;
+        for(let i=0;i<str.length;i++){
+            if(str[i]==str[i].toUpperCase && str[i]!== str[i].toLowerCase()){
+                count++;
+            }
+        }
+        console.log(count);
+
+    </script>
+</body>
+</html>

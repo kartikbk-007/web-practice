@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- username:<input type="text" id="user"><br><br>
+    password:<input type="password" id="pwd"><br><br>
+    <button>submit</button> -->
+
+    <input type="text" id="otp"  placeholder="enter otp"><br><br>
+    <button id="genotp">generate otp</button>
+    <button id="verify">verify</button>
+
+    <script>
+        // USERNAME AND PASSWORD
+
+        /*let input=document.querySelector("#user")
+        let pwd=document.querySelector("#pwd")
+        let button=document.querySelector("button")
+        button.onclick=function(){
+            console.log("your user name is "+input.value);
+            console.log("your password is "+pwd.value);
+        }*/
+
+        // OTP GENERATOR AND VERIFIER
+        
+        let input=document.querySelector("#otp")
+        let btn=document.querySelector("#genotp")
+        let verify=document.querySelector("#verify")
+        let otp;
+        btn.onclick=function (){  
+            otp=Math.trunc(Math.random()*10000)
+            alert( "your otp is "+otp)
+        }
+        verify.onclick=function(){
+            if(input.value==otp){
+                alert("valid otp")
+            }
+            else{
+                alert("invalid otp")
+            }   
+        }
+    </script>
+</body>
+</html>

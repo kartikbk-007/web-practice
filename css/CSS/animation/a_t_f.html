@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            position: relative;
+            margin:2px;
+            box-shadow: 2px 2px 5px 2px black;
+        }
+        @keyframes rotate {
+            0% {
+                left: 0px;
+            }
+            50% {
+                left: 500px;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+        .div1 {
+            animation-timing-function: linear;
+        }
+        .div2 {
+            animation-timing-function: ease-in;
+        }
+        .div3 {
+            animation-timing-function: ease-out;
+        }
+        .div4 {
+            animation-timing-function: ease-in-out;
+        }
+        .div5 {
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">linear</div>
+    <div class="div2">ease-in</div>
+    <div class="div3">ease-out</div>
+    <div class="div4">ease-in-out</div>
+    <div class="div5">ease</div>
+</body>
+</html>

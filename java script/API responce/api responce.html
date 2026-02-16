@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="user-list"></ul>
+    <script>
+        window.fetch("https://api.github.com/users")
+        .then((responce)=>responce.json())
+        .then((data)=>{
+            console.log(data);
+            let list=document.getElementById("user-list");
+            data.forEach(user => {
+                let li = document.createElement("li");
+                li.textContent = user.id;
+                list.appendChild(li);
+            });
+        })
+        .catch(()=>console.log("invalid api"))
+    </script>
+</body>
+</html>

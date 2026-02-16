@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+
+        <label for="Gender">gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">female</label>
+        <input type="radio" id="female" name="gender" value="female">
+
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        let btn=document.querySelector("button");
+        btn.addEventListener("click",(event)=>{
+            event.preventDefault();
+            let male=document.querySelector("#male");
+            let female=document.querySelector("#female")
+            if(male.checked){
+                console.log("male");
+            }
+            else if(female.checked){
+                console.log("female");
+            }
+            else{
+                console.log("no gender selected")
+            }
+        })  
+    </script>
+</body>
+</html>

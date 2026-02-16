@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="h1tag">hello</h1>
+    <h1 id="h2tag">Hello1</h1>
+    <h1 id="h3tag">Hello2</h1> -->
+
+    <input type="text" id="otp" placeholder="enter otp"><br><br>
+    <button id="genotp">generate otp</button>
+    <button id="verify">verify</button>
+    <script>
+        /*(function (){
+            console.log("hii");
+        })
+        ();
+        (function(){
+            console.log("Heloo");
+        })
+        ()
+        (function(){
+            console.log("byee");
+        })
+        ()*/
+
+        /*var a=()=>{
+            console.log("hii");
+        }
+        a()*/
+
+        /*function x(){
+            var a=10;
+            console.log(a);
+            function y(){
+                console.log("inner");
+            }
+            y()
+        }
+        x()*/
+
+        /*function outer(){
+            var a=10;
+            console.log(a);
+            function inner(){
+                var b=20;
+                console.log(a);
+                console.log(b);
+            }
+            inner()
+        }
+        outer()*/
+
+        /*function x(){
+            console.log("Hii");
+            function y(){
+                console.log("Hello");
+            }
+            return y
+        }
+        x()()*/
+
+        /*function x(){
+            var a=100;
+            return a;
+        }
+        console.log(x());*/
+
+        /*function x(){
+            var a=100;
+            return a
+        }
+        let b=x();
+        console.log(b);*/
+
+        /*function high(a,b,c){
+            console.log(a);
+            console.log(b);
+            c();
+        }
+        high(10,20,function(){
+            console.log("Hii");
+        })*/
+
+        /*function x(callback){
+            callback("raj");
+        }
+        x(y)
+        function y(name){
+            console.log("Hello "+name)
+        }*/
+
+        /*function* gen(){
+            yield 1;
+            yield 2;
+        }
+        let x=gen();
+        console.log(x.next().value);
+        console.log(x.next().value);*/
+
+        /*let arr=["a",10,"b",20]
+        console.log(arr[1]);*/
+
+        /*let arr=new Array("hii","hello","bye");
+        console.log(arr[0])*/
+
+        /*let a=[
+        function (){
+            console.log("hiii");
+        },
+        function (){
+            console.log("bye");
+        }
+        ]
+        a[0]()*/
+
+        /*let a=[1,2,3,4]
+        a.unshift("hii");
+        console.log(a)*/
+
+        /*let obj={
+            name : "veer",
+            age : 21
+        }
+        obj.name="deer"
+        obj.phone=1234567890
+        delete obj.age
+        console.log(obj)*/
+
+        /*let obj={
+            name:"veer",
+            location:{
+                district:"belagavi",
+                Taluka:"Gokak"
+            }
+        }
+        console.log(obj.location.district)*/
+
+        /*let obj={
+            movie1:"devil",
+            movie2:"K.G.F",
+            tickets:function(){
+                console.log("tickets are booked")
+            }
+        }
+        obj.tickets()*/
+
+        /*let obj={
+            name:"kartik",
+            age:23,
+            education:{
+                degree:"BSC",
+                collage:"ARYABHATA SCHOOL COLLAGE",
+                details:function(){
+                    console.log("degree is completed");
+                }
+            }
+        }
+        console.log(obj.education.degree)*/
+
+        /*let obj=[
+        {
+            name:"shoes",
+            brand:"puma",
+            price:22500},
+        {
+            name:"shoes",
+            brand:"nike",
+            price:22555},
+
+        {
+            name:"shoes",
+            brand:"adidas",
+            price:4500},    
+            ]
+            console.log(obj[1]);*/
+
+        /*a=Math.trunc(Math.random()*10000)
+        alert(a)
+        b=prompt("enter a otp")
+        if(b==a){
+            alert("valid otp")
+        }
+        else{
+            alert("invalid otp")
+        }*/
+        
+        /*let h1=document.getElementById("h1tag");
+        console.log(h1);*/
+
+        /*let h1=document.getElementsByClassName("h1tag");
+        console.log(h1);
+        console.log(h1[0])*/
+
+        /*function x(){
+            console.log("hello world");
+        }
+        x()*/
+
+        /*var a = function (){
+            console.log("hello");
+        }
+        a()*/
+
+        /*let a=function x(){
+            console.log("hello");
+        }
+        a()*/
+
+        let btn=document.querySelector("#genotp")
+        let input=document.querySelector("#otp")
+        let verify=document.querySelector("#verify")
+        let otp;
+        btn.onclick=function(){
+            otp=Math.trunc(Math.random()*10000)
+            alert("your otp is "+otp)
+        }
+        verify.onclick=function(){
+            if(input.value==otp){
+                alert("valid otp")
+            }
+            else{
+                alert("invalid otp")
+            }
+        }
+    </script>
+</body>
+</html>

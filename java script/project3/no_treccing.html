@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: black;
+            color: white;
+        }
+        #game{
+            background-color: #a2d5ee;
+            padding: 30px;
+            text-align: center;
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px grey;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #294159;
+        }
+        input{
+            width: 80%;
+            padding: 10px 0px;
+            margin: 10px 0px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(14, 14, 14);
+            font-family: sans-serif;
+            box-shadow: 5px 5px 15px grey;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+        button{
+            width: 80%;
+            padding: 10px 0;
+            margin: 10px 0px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #294159;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 5px 5px 15px grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+
+        <h1>Guess The Number (1-10)</h1>
+        <input type="number" placeholder=" Enter the number" id="guess">
+        <button onclick="checkguess()">Check</button>
+        
+        <p id="message"></p>
+        <p id="attempts"></p>
+    </div>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        let count = 0;
+
+        function checkguess(){
+            let userguess =Number(document.getElementById("guess").value)
+            count ++;
+            if (userguess === randomNumber){
+                document.getElementById("message").innerText="🥳Correct You Gussed";
+                document.getElementById("attempts").innerText="attempts:"+ count;
+            }
+            else if(userguess > randomNumber){
+                document.getElementById("message").innerText="Greater Than Guessed Number"
+            }
+            else{
+                document.getElementById("message").innerText="Less Than Guessed Number"
+            }
+        }
+        
+    </script>
+</body>
+</html>

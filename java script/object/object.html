@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let obj={
+            name:"Devil",
+            age:22
+        }
+        console.log(obj);
+        console.log(obj.name,obj.age);*/
+
+        //updateing the key
+
+        /*let obj={
+            name:"ajay",
+            age:25
+        }
+        obj.name="vijay"
+        console.log(obj);*/
+
+        //adding new key
+
+        /*let obj={
+            name:"vijay",
+            age:25
+        }
+        obj.name="ajay"
+        obj.phone=7562314569
+        console.log(obj)*/
+
+        //deleting inside a value
+
+        /*let obj={
+            name:"vijay",
+            age:25
+        }
+        obj.name="ajay"
+        obj.phone=7562314569
+        delete obj.age
+        console.log(obj);*/
+
+        //nested object
+
+        /*let obj={
+            name:"srinivas",
+            location:{
+                District:"Chennai",
+                state:"kerala"
+            }
+        }
+        console.log(obj.location);
+        console.log(obj.location.District);*/
+
+        //function inside an object
+
+        /*let obj={
+            movie1:"Devil",
+            movie2:"mark",
+            tickets:function(){
+                console.log("tickets are booked");
+            }
+        }
+        obj.tickets();*/
+
+        //waf in nested object
+
+        /*let obj={
+            name:"kartik",
+            age:23,
+            education:{
+                degree:"Bsc",
+                college:"Aryabhata science college",
+                details:function(){
+                    console.log("degree is completed");
+                }
+            }
+        }
+        console.log(obj.education.degree);*/
+
+        //object-de-structuring = converting keys into variables
+
+        //without de-structuring way
+        /*let obj={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj.age);
+        let age=obj.age;
+        console.log(age);*/
+
+        //de-structuring way
+        /*let obj={
+            name:"kartik",
+            age:23
+        }
+        let {name,age}=obj;
+        console.log(name);
+        console.log(age);*/
+
+        //nested object de-structuring
+        /*let obj={
+            name:"kartik",
+            age:23,
+            location:{
+                state:"Karnataka",
+                district:"Belagavi",
+                taluk:"Gokak"
+            }
+        }
+        let {name}=obj;
+        let {district,state,taluk}=obj.location;
+        console.log(name);
+        console.log(district);
+        console.log(state);
+        console.log(taluk);*/
+
+        //array of objects
+
+        /*let arr=[10,20,30]
+            arr[0]=10
+            arr[1]=20
+            arr[2]=30
+        console.log(arr[0]);*/
+
+        /*let arr=[
+            {
+                name:"shoes",
+                brand:"puma",
+                price:2500
+            },
+            {
+                name:"shoes",
+                brand:"adidas",
+                price:3000
+            },
+            {
+                name:"shoes",
+                brand:"nike",
+                price:3500
+            }
+        ]
+        console.log(arr);
+        console.log(arr[1]);*/
+
+        //immutable
+        /*let a=10;
+        let b=a;
+        b=20;
+        console.log(a);
+        console.log(b);*/
+
+        //mutable
+        let a={value:10};
+        let b=a;
+        b.value=20;
+        console.log(a.value);
+        console.log(b.value);
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .container{
+            background-color: #aad6e6;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            color: black;            
+        }
+        input{
+            width: 80%;
+            padding: 8px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 15px;
+            font-size: 16px;
+
+        }
+        button{
+            padding: 8px 12px;
+            background-color: rgb(42, 50, 168);
+            margin-top: 10px;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>⛅Weather App</h2>
+        <input type="text" id="city" placeholder="Enter City Name">
+        <br>
+        <button onclick="getweather()">Search</button>
+    <div class="Wheather">
+        <h3 id="cityName"></h3>
+        <p id="temp"></p>
+        <p id="desc"></p>
+        <p id="Humidity"></p>
+        <p id="Wind"></p>
+    </div>
+    </div>
+
+    <script>
+        async function getweather(){
+            const city = document.getElementById("city").value;
+        if(city === "")
+        {
+        alert("Please Enter City Name")
+            return ;
+        }
+        const url = "a040e8e9c07141b18f471742260102"; + city;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+        }
+        catch(error){
+            alert("Something went wrong");
+            console.log(error);
+            return;
+            
+
+        }
+    }
+</script>
+</body>
+</html>

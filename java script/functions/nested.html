@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function x(){
+            var a=10;
+            console.log(a);
+            function y(){
+                console.log("inner function");
+            }
+            y()
+        }
+        x()*/
+        function x(){
+            var a=100;
+            console.log(a);
+            function y(){
+                var b=30;
+                console.log(a);
+                console.log(b);
+            }
+            y()
+        }
+        x()
+    </script>
+</body>
+</html>

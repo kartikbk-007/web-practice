@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*input{
+            outline: none;
+        }*/
+        h1{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- submit event -->
+    <!-- <form action="" id="form1">
+        <input type="text" placeholder="Enter text" required>
+        <button type="submit">submit</button>
+    </form> -->
+
+    <!-- focus event -->
+    <!-- <form action="" id="input">
+        <input type="text" placeholder="Enter text">
+        <button type="submit">submit</button>
+    </form> -->
+
+    <!-- blur event -->
+    <!-- <form action="" id="form1">
+        <input type="text" placeholder="Enter text">
+        <button type="submit">submit</button>
+    </form> -->
+
+    <!-- load event and scroll event -->
+    <h1>lodinggg</h1>
+    
+    <script>
+        // submit event
+        /*let form=document.querySelector("#form1")
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            alert("data is submited")
+        })*/
+
+        // focus event
+        /*let input=document.querySelector("#input");
+        input.addEventListener("focus",(event)=>{
+            event.preventDefault();
+            input.style.border = "5px solid orange";
+        });*/
+
+        // blur event
+        /*let form = document.querySelector("#form1");
+        form.addEventListener("blur", (event) => {
+            event.preventDefault();
+            form.style.border = "5px solid red";
+        }, true);*/
+
+        // load event
+        /*window.addEventListener("load", () => {
+            alert("page is loaded");
+        });*/
+
+        // scroll event
+        window.addEventListener("scroll",()=>{
+            alert("page is scrolling")
+        });
+    </script>
+    </body>
+    </html>

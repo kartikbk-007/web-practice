@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <input type="text" id="reguser" placeholder="enter the username"><br>
+    <input type="text" id="regpwd" placeholder="enter the password">
+    <button onclick="register()">register</button><br><br>
+    <hr><hr>
+
+    <h1>Login</h1>
+    <input type="text" id="Loginuser" placeholder="enter the username"><br>
+    <input type="text" id="Loginpwd" placeholder="enter the password">
+    <button onclick="login()">Login</button>
+    <h1 id="msg"></h1>
+
+    <script>
+        function register(){
+            let reguser=document.getElementById("reguser").value;
+            let regpwd=document.getElementById("regpwd").value;
+            console.log(regpwd);
+
+            window.localStorage.setItem("username",reguser)
+            window.localStorage.setItem("password",regpwd)
+        }
+
+        function login(){
+            let Loginuser=document.getElementById("Loginuser").value;
+            let Loginpwd=document.getElementById("Loginpwd").value;
+            let user=window.localStorage.getItem("username");
+            let passward=window.localStorage.getItem("password");
+            if(Loginuser===user){
+                if(Loginpwd===passward){
+                    alert("successfully loggedin")
+                }
+                else{
+                    alert("passward not matched")
+                }
+            }
+            else{
+                alert("user not matched")
+            }
+        }
+    </script>
+</body>
+</html>

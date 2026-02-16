@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- getElementById -->
+    <!-- <h1 id="h1tag">Hello1</h1>
+    <h1 id="h2tag">Hello2</h1>
+    <h1 id="h3tag">Hello3</h1> -->
+
+    <!-- getElementsByClassName -->
+    <!-- <h1 class="h1">Hello1</h1>
+    <h1 class="h1">Hello2</h1>
+    <h1 class="h1">Hello3</h1> -->
+
+    <!-- getElementsByTagName -->
+    <!-- <h1>Hello1</h1>
+    <h1>Hello2</h1>
+    <h1>Hello3</h1> -->
+
+    <!-- querySelector and querySelectorAll -->
+    <h1>Hello1</h1>
+    <h1>Hello2</h1>
+    <h1>Hello3</h1>
+    
+    
+    <script>
+        //getElementById returns a single element
+
+        /*let h1=document.getElementById("h1tag");
+        console.log(h1);
+        console.log(h1[0]); //undefined*/
+
+        //getElementsByClassName returns a HTMLCollection of elements
+        /*let h1=document.getElementsByClassName("h1");
+        console.log(h1);
+        console.log(h1[0]);*/
+
+        //getElementsByTagName returns a HTMLCollection of elements
+        /*let h1=document.getElementsByTagName("h1");
+        console.log(h1);
+        console.log(h1[0]);
+        console.log(h1[1]);
+        console.log(h1[2]);*/
+
+        //querySelector returns the first matching element
+        //querySelector returns a single element
+        //document.querySelector
+
+        /*let h1=document.querySelector("h1");
+        console.log(h1);
+        console.log(h1[0]);*/
+
+        //document.querySelectorAll
+        //it will return a NodeList of elements
+        let h1=document.querySelectorAll("h1")
+        console.log(h1);
+        console.log(h1[0]);
+        console.log(h1[1]);
+
+    </script>
+</body>
+</html>

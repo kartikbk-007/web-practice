@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html Attributes Example -->
+    <!-- <button onclick="alert('Event triggered')">submit</button> -->
+
+    <!-- dom property example and add eventlistener -->
+    <!-- <button>submit</button> -->
+
+    <!-- <h1 onmouseover="over()" onmouseout="out()">Hello</h1> -->
+
+    <!-- add eventlistener and changing the text on webpage -->
+    <!-- <h1>helloo</h1>
+        <button>submit</button> -->
+
+    <!-- input event(live typing) -->
+    <!-- <input type="text" id="input" placeholder="Type something">
+    <p id="output"></p> -->
+
+    <!-- keydown event example -->
+    <!-- <input type="text" id="input" placeholder="Press any key "> -->
+
+    <!-- event.preventDefault() -->
+    <!-- <form action=""></form>
+    <input type="text" id="input" placeholder="Type something">
+    <button type="submit">submit</button> -->
+
+
+    
+    <script>
+        /*dom properties example*/
+        /*let btn=document.querySelector("button")
+        btn.onclick=function(){
+            document.body.style.backgroundColor="orange"
+        }*/
+
+        //add eventlistener example
+        /*let btn=document.querySelector("button")
+        btn.addEventListener("click",function(){
+            document.body.style.backgroundColor="orange"
+        })*/
+
+        //ondblclick example
+        /*let btn=document.querySelector("button")
+        btn.ondblclick=function(){
+            document.body.style.backgroundColor="yellow"
+        }*/
+
+        //onmouseover and onmouseout example
+
+        /*function over(){
+        let h1=document.querySelector("h1")
+        h1.style.color="orange"
+        }
+        function out(){
+            let h1=document.querySelector("h1")
+            h1.style.color="pink"
+            //h1.style.fontSize="500px"
+        }*/
+
+        //add eventlistener and changing the text on webpage
+
+        /*let btn=document.querySelector("button")
+        btn.addEventListener("click",()=>{
+            let h1=document.querySelector("h1")
+            h1.innerText="hiii"
+        })*/
+
+        //input event(live typing)
+
+        /*let input=document.querySelector("input");
+        input.addEventListener("input",()=>{
+            document.querySelector("#output").innerHTML=input.value
+        })*/
+
+        /*-- a=document.querySelector("#input");
+        a.addEventListener("keydown",()=>{
+            console.log("Hiii")
+        })*/
+
+        //event.preventDefault()
+        /*let btn=document.querySelector("button");
+        btn.addEventListener("click",(event)=>{
+            event.preventDefault();
+            console.log(input.value)
+        })*/
+
+        
+    </script>
+    </body>
+    </html>

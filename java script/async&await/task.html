@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="text">
+    <button onclick="save()">save</button>
+    <button onclick="get()">get</button>
+    
+    <script>
+        let a=document.querySelector("#input")
+        function save(){
+            window.localStorage.setItem("user",a.value)
+        }
+        function get(){
+            let a=window.localStorage.getItem("user")
+            console.log(a);
+        }
+    </script>
+</body>
+</html>

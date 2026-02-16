@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object key
+        /*let obj ={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj);
+        let key = Object.keys(obj)
+        console.log(key);*/
+        
+        //object values
+        /*let obj ={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj);
+        let values = Object.values(obj)
+        console.log(values);*/
+
+        //object entries
+        /*let obj ={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj);
+        let values = Object.entries(obj)
+        console.log(values);*/
+
+        //Object freeze
+        /*let obj ={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj);
+        //Object.freeze(obj);
+        obj.education="BSC"
+        obj.name="Veer"
+        delete obj.age
+        Object.freeze(obj);
+        console.log(obj);*/
+
+        //Object seal
+        let obj ={
+            name:"kartik",
+            age:23
+        }
+        console.log(obj);
+        Object.seal(obj);
+        obj.education="BSC"
+        obj.name="Veer"
+        delete obj.age
+        //Object.seal(obj);
+        console.log(obj);
+    </script>
+</body>
+</html>

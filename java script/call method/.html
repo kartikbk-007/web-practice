@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car1 ={
+            name :"BMW"
+        }
+        let car2 ={
+            name :"Audi"
+        }
+        let car3 ={
+            name :"Toyota"
+        }
+        let car4 ={
+            name :"Ford"
+        }
+        let car5 ={
+            name :"Mercedes Benz"
+        }
+        function greet(color,model){
+            console.log(this.name + " "+ color + " " + model);
+        }
+        greet.call(car1,"red",2020);
+        greet.call(car2,"blue",2021);
+        greet.call(car3,"green",2022);
+        greet.call(car4,"black",2019);
+        greet.call(car5,"white",2023);
+    </script>
+</body>
+</html>

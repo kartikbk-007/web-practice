@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="city">city</label>
+        <select name="city" id="city">
+            <option value="">--select--</option>
+            <option value="bangluru">bangluru</option>
+            <option value="belagavi">belagavi</option>
+            <option value="ladakh">ladakh</option>
+            <option value="panaji">panaji</option>
+            <option value="hydrabad">hydrabad</option>
+            <option value="dehli">dehli</option>
+            <option value="leh">leh</option>
+            <option value="mumbai">mumbai</option>
+            <option value="chennai">chennai</option>
+            <option value="pune">pune</option>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        let btn=document.querySelector("button")
+        btn.addEventListener("click",(event)=>{
+            event.preventDefault()
+            let select=document.querySelector("#city")
+            console.log(select.value);
+            
+        })
+    </script>
+</body>
+</html>

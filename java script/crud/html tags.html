@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <h1>hello <b>bold</b></h1> -->
+
+        <!-- <div>
+            hello
+            <span style="display: none;">world</span>    
+        </div> -->
+
+        <!-- <div id="box">
+            <p id="old">old text</p>
+        </div> -->
+
+        <div>
+            <p>old text</p>
+        </div>
+        
+    <script>
+        /*let p=document.createElement("p")
+        //p.textContent="hiii" //adding text to p tag
+        p.innerText="hiii" //updating the p tag
+        console.log(p);*/
+
+        //appendchild() method
+        /*let p=document.createElement("p")
+        p.innerText="hello world"
+        console.log(p);
+        document.body.appendChild(p)*/
+
+        //create a div and add h1 tag inside the div using appendchild method
+
+        /*let div=document.createElement("div");
+        document.body.appendChild(div)
+        let h1=document.createElement("h1");
+        h1.innerText="Hello"
+        div.appendChild(h1);
+        let p=document.createElement("p");
+        p.innerText="para"
+        div.append(p);*/
+
+        //innerText and innerHTML
+
+        /*let h1=document.querySelector("h1")
+        console.log(h1.innerText);
+        console.log(h1.innerHTML);
+        h1.style.color="red";
+        h1.style.border="5px solid";*/
+
+        //textContent
+
+        /*let div=document.createElement("div");
+        document.body.appendChild(div);
+        div.textContent="Hellooooo"
+        div.style.width="200px";
+        div.style.height="200px";
+        div.style.backgroundColor="red";
+        //console.log(box);
+        //box.style.borderRadius="50%";*/        
+
+        /*let div=document.querySelector("div");
+        console.log(div.innerText);
+        //console.log(div.textContent);
+        //console.log(div.innerHTML);
+        //console.log(div.outerHTML);*/
+
+        //replaceChild()
+        //replace old p tag with new p tag inside the div
+
+        /*let p=document.createElement("p")
+        p.innerText="new one";
+
+        let parent=document.querySelector("#box");
+        let old=document.querySelector("#old");
+        parent.replaceChild(p,old);*/
+
+        //removeChild()
+
+        let parent=document.querySelector("div");
+        let p=document.querySelector("p")
+        parent.removeChild(p);
+    </script>
+    </body>
+    </html>

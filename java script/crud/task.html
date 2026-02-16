@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*img=document.createElement("img")
+        img.setAttribute("src","https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/avengers-end-game-et00090482-07-12-2018-06-50-21.jpg")
+        img.setAttribute("height","400px")
+        img.setAttribute("width","300px")
+        img.setAttribute("alt","my image");
+        document.body.append(img)
+        console.log(img.getAttribute("height"));*/
+
+
+        //create table
+
+        let table=document.createElement("table");
+        let tr1 = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let tr2 = document.createElement("tr");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        td1.innerText = "1"
+        td2.innerText = "2"
+        td3.innerText = "3"
+        td4.innerText = "4"
+        tr1.append(td1,td2);
+        tr2.append(td3,td4);
+        table.append(tr1,tr2);
+
+        table.setAttribute("border","1");
+        table.setAttribute("cellspacing","0px");
+        table.setAttribute("cellpadding","10px");
+
+        console.log(table);
+        document.body.appendChild(table);
+    </script>
+    </body>
+    </html>

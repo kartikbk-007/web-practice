@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function outer(){
+            var a=5;
+            console.log(a);
+            function inner(){
+                var b=10;
+                console.log(b);
+                console.log(a);
+            }
+            inner(a)
+        }
+        outer()*/
+        /*function x(){
+            console.log("Hii");
+            function y(){
+                console.log("Hello");
+            }
+            return y
+        }
+        x()()*/
+        /* function x(){
+            var a=100;
+            return a;
+        }
+        console.log(x());*/
+        /*function x(){
+            var a=100;
+            return a;
+        }
+        let b=x();
+        console.log(b);*/
+        function x(){
+            let count=0
+            function y(){
+                count ++;
+                console.log(count);
+            }
+            return y
+        }
+        let c=x();
+        c();
+        c();
+        c();
+    </script>
+</body>
+</html>

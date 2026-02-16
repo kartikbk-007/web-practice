@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="search" type="text" placeholder="search">
+    <script>
+        /*function debounce (fucn,delay){
+            let timer;
+            return function(args){
+                clearTimeout(timer);
+                timer = setTimeout(()=>{
+                    fucn.apply(this,args);
+                },delay)
+            };
+        }
+        document.getElementById("search").addEventListener("keyup",debounce(search,500));
+        function search(){
+            console.log("searching");
+        }*/
+
+        function search(){
+            console.log("api call");
+        }
+        document.getElementById("search").addEventListener("keyup",search);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changecolor()">Change</button>
+    <script>
+        function changecolor(){
+            document.body.classList.toggle("red");//toggle is used to add and remove the class and it is like boolean type
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function y(){
+            console.log("Data is loading");
+            console.log("Data processing");
+            let a = await x();
+            console.log(a);
+            console.log("Data loading done");
+            console.log("Data processing done");
+        }
+        y();
+    </script>
+</body>
+</html>
