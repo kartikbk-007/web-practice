@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input{
+            padding: 10px;
+            width: 200px;
+            margin: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #2980b9;
+        }
+        #result{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 9 - Age Checker App</h1>
+    <input type="number" id="ageInput" placeholder="Enter Your Age"><br>
+    <button id="checkBtn">Check</button>
+    <p id="result"></p>
+
+    <script>
+        const button = document.getElementById("checkBtn");
+        const result = document.getElementById("result");
+
+        button.addEventListener("click", function(){
+            const age = document.getElementById("ageInput").value;
+            if(age >= 18){
+                result.innerText = "You are eligible to vote";
+                result.style.color = "green";
+            } else if (age > 0){
+                result.innerText = "You are under 18";
+                result.style.color = "red";
+            } else{
+                result.innerText = "please enter a valid age";
+                result.style.color = "orange";
+            }
+        });
+    </script>
+</body>
+</html>
