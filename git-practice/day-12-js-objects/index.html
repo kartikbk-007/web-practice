@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        input{
+            padding: 10px;
+            width: 250px;
+        }
+        button{
+            padding: 10px 15px;
+            margin-left: 5px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li{
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .done{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>>Day 12 - To Do with objects</h1>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+    <script>
+        let tasks = [];
+        function addTask(){
+            const input = document.getElementById("taskInput");
+            const value = input.value;
+            if(value === ""){
+                alert("Enter a task!");
+                return;
+            }
+            const taskObj = {
+                id: Date.now(),
+                text: value,
+                completed: false
+            };
+            tasks.push(taskObj);
+            input.value = "";
+            displayTasks();
+        }
+        function displayTasks(){
+            const list = document.getElementById("taskList");
+            list.innerHTML = "";
+            tasks.forEach(function(task){
+                const li = document.createElement("li");
+                if(task.completed){
+                    li.classList.add("done");
+                }
+                li.innerText = task.text;
+                li.addEventListener("click", function(){
+                    task.completed = !task.completed;
+                    displayTasks();
+                });
+                list.appendChild(li);
+            });
+        }
+        console.log(tasks);
+    </script>
+</body>
+</html>
