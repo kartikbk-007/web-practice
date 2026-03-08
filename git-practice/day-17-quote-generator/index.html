@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            padding: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .card{
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #quote{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #author{
+            margin-top: 10px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 17 - Quote Generator</h1>
+    <div class="card">
+        <p id="quote">Click button to load quote </p>
+        <p id="author"></p>
+        <button onclick="getQuote()">New Quote</button>
+    </div>
+    <script>
+        async function getQuote(){
+            const url="https://dummyjson.com/quotes/random"
+            document.getElementById("quote").innerText="Loading quote..."
+            const response=await fetch(url)
+            const data=await response.json()
+            document.getElementById("quote").innerText=`"${data.quote}"`
+            document.getElementById("author").innerText=`- ${data.author}`
+            
+        }
+        getQuote()
+    </script>
+</body>
+</html>
