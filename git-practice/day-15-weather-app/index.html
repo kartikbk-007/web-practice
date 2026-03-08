@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f4f4;
+        }
+        .card{
+            background: white;
+            padding: 30px;
+            width: 320px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input{
+            padding: 10px;
+            width: 200px;
+            margin-top: 10px;
+        }
+        button{
+            padding: 10px 15px;
+            background: #3498db;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #weather{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 15 - Weather App</h1>
+    <div class="card">
+        <input type="text" id="cityInput" placeholder="Enter city"><br>
+        <button onclick="getweather()">Search</button>
+        <div id="weather"></div>
+    </div>
+    <script>
+        async function getweather(){
+            const city = document.getElementById("cityInput").value
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=7fcee19858f8786f05f13a8f2b51c597`
+            try{
+                const response = await fetch(url)
+                const data = await response.json()
+                if (data.cod !==200){
+                    document.getElementById("weather").innerText="City not found!"
+                    return
+                }
+                document.getElementById("weather").innerHTML=
+                `<h2>${data.name}</h2>
+                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Weather: ${data.weather[0].description}</p>`
+            }
+            catch(error){
+                document.getElementById("weather").innerText="City not found!"
+            }
+        }
+    </script>
+</body>
+</html>
