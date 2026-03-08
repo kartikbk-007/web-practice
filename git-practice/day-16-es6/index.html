@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+        button{
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 16 - Modern Javascript (ES6)</h1>
+    <button onclick="runDemo()">Run Demo</button>
+    <p id="output"></p>
+    <script>
+        const person={
+            name:"Kartik",
+            age: 21,
+            city:"Banglore"
+        }
+        const{name,age,city}=person
+        const skills = ["HTML","CSS","Javascript"]
+        const moreSkills=[...skills,"React"]
+        const greet=()=>{
+            return `Hello ${name} from ${city}`
+        }
+        function sum(...numbers){
+            return numbers.reduce((total,n)=>total+n,0)
+        }
+        function runDemo(){
+            const message=greet()
+            const total = sum(10,20,30)
+            document.getElementById("output").innerHTML=
+            `<p>${message}</p>
+            <p>Skills: ${moreSkills.join(", ")}</p>
+            <p>Sum Example: ${total}</p>`
+        }
+    </script>
+</body>
+</html>
