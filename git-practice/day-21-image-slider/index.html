@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f4f4;
+        }
+        .slider{
+            width: 400px;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 21 - Image Slider</h1>
+    <div class="slider">
+        <img src="https://picsum.photos/400/250?random=1" id="slide" alt=""><br>
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+    <script>
+        const images = [
+        "https://picsum.photos/400/250?random=1",
+        "https://picsum.photos/400/250?random=2",
+        "https://picsum.photos/400/250?random=3",
+        "https://picsum.photos/400/250?random=4",
+        "https://picsum.photos/400/250?random=5",
+        "https://picsum.photos/400/250?random=6",
+        "https://picsum.photos/400/250?random=7",
+        "https://picsum.photos/400/250?random=8"
+        ]
+        let index = 0
+        function showSlide(){
+            document.getElementById("slide").src = images[index]
+        }
+        function nextSlide(){
+            index++
+            if(index >= images.length){
+                index = 0
+            }
+            showSlide()
+        }
+        function prevSlide(){
+            index--
+            if(index < 0){
+                index = images.length - 1
+            }
+            showSlide()
+        }
+    </script>
+</body>
+</html>
