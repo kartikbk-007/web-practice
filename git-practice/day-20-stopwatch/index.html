@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            padding-top: 120px;
+            background: #f4f4f4;
+        }
+        #time{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        button{
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .start{
+            background: #3ecc71;
+            color: white;
+        }
+        .stop{
+            background: #e74c3c;
+            color: white;
+        }
+        .reset{
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 20 - stopwatch</h1>
+    <div id="time">00:00:00</div>
+    <button class="start" onclick="startTimer()">Start</button>
+    <button class="stop" onclick="stopTimer()">Stop</button>
+    <button class="reset" onclick="resetTimer()">Reset</button>
+    <script>
+        let seconds = 0;
+        let timer = null;
+        function updateDisplay(){
+            let hrs = Math.floor(seconds / 3600);
+            let mins = Math.floor((seconds % 3600) / 60);
+            let secs=seconds % 60;
+            hrs = hrs.toString().padStart(2,"0");
+            mins = mins.toString().padStart(2,"0");
+            secs = secs.toString().padStart(2,"0");
+            document.getElementById("time").innerText = `${hrs}:${mins}:${secs}`;
+        }
+        function startTimer(){
+            if(timer !== null)return;
+            timer = setInterval(() => {
+                seconds++;
+                updateDisplay();
+            },1000);
+        }
+        function stopTimer(){
+            clearInterval(timer);
+            timer=null;
+        }
+        function resetTimer(){
+            clearInterval(timer);
+            timer = null;
+            seconds = 0;
+            updateDisplay();
+        }
+        updateDisplay();
+    </script>
+</body>
+</html>
